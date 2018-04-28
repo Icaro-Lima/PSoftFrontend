@@ -6,7 +6,7 @@ const credentials = 'icaro:amendoboboyeah';
 let msgs = [];
 function draw() {
   let html = '<thead class="thead-dark"><tr><th scope="row">#</th><th scope="col">Autor</th><th scope="col">Titulo</th><th scope="col">Mensagem</th><th score="col"></th></tr></thead>';
-  html += '<tbody><tr><th scope="row">+</th><td><input id="author" type="text"/></td><td><input id="title" type="text"/></td><td><input id="msg" type="text"/></td><td><button type="button" class="btn btn-success" onclick="submit()">Publicar</button></td></tr>';
+  html += '<tbody>';
   for (let i = msgs.length - 1; i >= 0; i--) {
     let msg = msgs[i];
     html += `<tr><th scope="row">${msg.id}</th><td>${msg.author}</td><td>${msg.title}</td><td>${msg.msg}</td>`;

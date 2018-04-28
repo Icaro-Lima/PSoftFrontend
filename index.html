@@ -2,11 +2,28 @@
 <html lang="pt" dir="ltr">
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <table id ="table" class="table thead-light"></table>
-    <script src = "front.js"></script>
+    <div class="row">
+      <div class="col">
+        <div class="form-group" id="float" align="center">
+          <h3>Autor:</h3>
+          <input class="form-control" id="author" type="text"></input>
+          <h3>Título:</h3>
+          <input class="form-control" id="title" type="text"></input>
+          <h3>Mensagem:</h3>
+          <textarea class="form-control" id="msg"></textarea>
+          <br>
+          <button type="button" class="btn btn-success" onclick="submit()">Publicar</button>
+        </div>
+      </div>
+      <div class="col">
+        <table id ="table" class="table thead-light"></table>
+      </div>
+    </div>
+    <script src = "index.js"></script>
   </body>
 </html>
