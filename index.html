@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css"/>
     <meta charset="utf-8">
-    <title></title>
+    <title>Message Board</title>
+    <link href="styles.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
+
   <body>
-    <div class="row">
-      <div class="col">
-        <div class="form-group" id="float" align="center">
-          <h3>Autor:</h3>
-          <input class="form-control" id="author" type="text"></input>
-          <h3>Título:</h3>
-          <input class="form-control" id="title" type="text"></input>
-          <h3>Mensagem:</h3>
-          <textarea class="form-control" id="msg"></textarea>
-          <br>
-          <button type="button" class="btn btn-success" onclick="submit()">Publicar</button>
+
+    <table>
+      <col width="90%"/>
+
+      <td>
+        <div id="editable-board">
         </div>
-      </div>
-      <div class="col">
-        <table id ="table" class="table thead-light"></table>
-      </div>
-    </div>
-    <script src = "index.js"></script>
+        <div id="board">
+        </div>
+      </td>
+
+      <td class="col">
+        <img src="trash-bin-open.png" id="trash-bin" drop="false" ondrop="onDrop(event)" ondragover="onAllowDrop(event)" />
+        <div id="container-floating">
+          <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div>
+          <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="contract@gmail.com"><img class="reminder">
+            <p class="letter">C</p>
+          </div>
+          <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Reminder"><img class="reminder" src="//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/ic_reminders_speeddial_white_24dp.png" /></div>
+          <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="Edoardo@live.it"><img class="reminder">
+            <p class="letter">E</p>
+          </div>
+
+          <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="addMessageForm()">
+            <p class="plus">+</p>
+            <img class="edit" src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">
+          </div>
+        </div>
+      </td>
+    </table>
+    <script src="moment-with-locales.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
