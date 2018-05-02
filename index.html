@@ -9,6 +9,21 @@
 
   <body>
 
+    <div id="formholderbackground">
+    </div>
+
+    <div id="formholder">
+      <div id="randompad">
+        <fieldset>
+          <label name="Frontend">Frontend</label>
+          <input id="frontend" type="text" />
+          <label name="Password">Secret</label>
+          <input id="secret" type="password" />
+          <input type="submit" onclick="login()" />
+        </fieldset>
+      </div>
+    </div>
+
     <table>
       <col width="90%"/>
 
@@ -21,7 +36,7 @@
 
       <td class="col">
         <img src="trash-bin-open.png" id="trash-bin" drop="false" ondrop="onDrop(event)" ondragover="onAllowDrop(event)" />
-        <div id="container-floating">
+        <div id="container-floating" hidden>
           <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div>
           <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="contract@gmail.com"><img class="reminder">
             <p class="letter">C</p>

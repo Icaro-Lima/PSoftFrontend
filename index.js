@@ -1,11 +1,16 @@
 const board = document.getElementById('board');
 const editableBoard = document.getElementById('editable-board');
 const trashBin = document.getElementById('trash-bin');
+const formholderBackground = document.getElementById('formholderbackground');
+const formholder = document.getElementById('formholder');
+const formholderFrontend = document.getElementById('frontend');
+const formholderSecret = document.getElementById('secret');
+const containerFloating = document.getElementById('container-floating');
 
 const backendUrl = 'http://150.165.85.16:9900/';
 
-const frontend = 'icaro';
-const secret = 'amendoboboyeah';
+let frontend = '';
+let secret = '';
 
 const colors = [ '#00FFFF', '#00CED1', '#40E0D0', '#48D1CC', '#20B2AA', '#008B8B', '#008B8B', '#7FFFD4', '#66CDAA', '#5F9EA0' ];
 
@@ -110,6 +115,16 @@ function onDragEnd(event) {
   trashBin.setAttribute('drop', false);
 }
 
-moment.locale('pt-BR');
+function login() {
+  frontend = formholderFrontend.value;
+  secret = formholderSecret.value;
 
-beginBoardLoad();
+  formholder.parentElement.removeChild(formholder);
+  formholderBackground.parentElement.removeChild(formholderBackground);
+
+  containerFloating.removeAttribute('hidden');
+
+  beginBoardLoad();
+}
+
+moment.locale('pt-BR');
